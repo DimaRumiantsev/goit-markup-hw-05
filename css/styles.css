@@ -22,6 +22,10 @@ ul,ol{
     padding-left: 0;
 }
 
+a{
+    transition: color 250ms;
+}
+
 img {
     display: block;
     max-width: 100%;
@@ -125,7 +129,6 @@ color:var(--logo-color);
 
 .menu-link{
 position: relative;
-font-weight: 500;
 font-size: 14px;
 line-height: 1.14;
 letter-spacing: 0.02em;
@@ -134,18 +137,18 @@ color:var(--tekst-color);
 padding: 32px 0;
 }
 
+
 .menu-link.current::after{
 position: absolute;
-bottom: -1px;
+bottom: 0;
 width: 100%;   
 height: 4px;
 background-color:var(--fon-color); 
 content: "";
 display: block;
 border-radius: 2px;
-
-
 }
+
 
 
 .menu-link:hover,
@@ -625,7 +628,6 @@ gap: 8px;
 }
 
 .portfolio-link{
-    
     display: block;
 }
 
@@ -635,6 +637,9 @@ gap: 8px;
 }
 
 .overlay{
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 3%;
     position: absolute;
     left: 0;
     top: 0;
@@ -657,8 +662,31 @@ gap: 8px;
     transform: translate(0, 0);
 }
 
+/*----------MODAL Window----------*/
+.backdrop{
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
 
+}
 
+.modal{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 528px;
+    max-height: 581px;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+}
+/*----------MODAL Window----------*/
 
 
 
