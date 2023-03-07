@@ -182,11 +182,12 @@ line-height: 1.14;
 letter-spacing: 0.02em;
 color:var(--coment-color);
 padding: 32px 0;
+transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
+
 .phone-number:hover,
 .phone-number:focus{
 color:var(--fon-color);
-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-mail{
 display: flex;
@@ -196,12 +197,14 @@ font-size: 14px;
 line-height: 1.14;
 letter-spacing: 0.02em;
 color:var(--coment-color);
-padding: 32px 0;  
+padding: 32px 0; 
+transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
+
 .menu-mail:hover,
 .menu-mail:focus{
 color: var(--fon-color);
-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 /*===========/HEADER===========*/
 
@@ -255,7 +258,7 @@ padding-bottom: 10px;
 padding-left: 32px;
 padding-right: 32px;
 border: 1px solid transparent;
-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn:hover,
@@ -383,12 +386,13 @@ color:var(--tekst-color)
     height: 44px;
     border-radius: 50%;
     background-color: #ffffff;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list-link:hover,
 .social-list-link:focus{
     background-color: #2196F3;
+    
 }
 
 .social-list-link:hover .social-list-icon,
@@ -437,12 +441,12 @@ color:var(--tekst-color)
     border: 1px solid var(--icon-color);
     border-radius: 4px;
     color: var(--icon-color);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition:border-color  250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill  250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.client-icon{
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+
+
 
 .client-list :hover,
 .client-list :focus{
@@ -491,7 +495,7 @@ border-color: #2196F3;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
     color: var(--title-color);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link-footer:hover,
@@ -566,7 +570,9 @@ border-color: #2196F3;
     border: 0;
     cursor: pointer;
     padding: 6px 22px;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .current{
     color: var(--fon-color);
@@ -685,7 +691,8 @@ gap: 8px;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transition:transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
@@ -701,8 +708,10 @@ gap: 8px;
     max-height: 581px;
     border-radius: 4px;
     background-color: #FFFFFF;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn{
@@ -718,7 +727,10 @@ gap: 8px;
     padding: 0;
     background-color: transparent;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    transition: border-color 250mx cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn :hover,
@@ -735,7 +747,6 @@ gap: 8px;
     fill: var(--fon-color);
 }
     
-/*----------MODAL Window----------*/
 
 .backdrop.is-hidden{
     opacity: 0;
@@ -743,7 +754,11 @@ gap: 8px;
     pointer-events: none;
 }
 
+.backdrop.is-hidden .modal{
+    transform: scale(0);
+}
 
+/*----------MODAL Window----------*/
 
 
 
